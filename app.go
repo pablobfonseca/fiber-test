@@ -10,6 +10,11 @@ import (
 func main() {
 	app := fiber.New()
 
+	// Static
+	app.Static("/assets", "./public")
+	// => http://localhost:3000/assets/js/script.js
+	// => http://localhost:3000/assets/css/script.js
+
 	// Get /api/register
 	app.Get("/api/*", func(c *fiber.Ctx) error {
 		msg := fmt.Sprintf("🖐 %s", c.Params("*"))
@@ -41,5 +46,4 @@ func main() {
 	})
 
 	log.Fatal(app.Listen(":3000"))
-
 }
