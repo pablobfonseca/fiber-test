@@ -1,0 +1,3 @@
+#+TITLE: Go Fiber Test
+
+This is just a dummy app to try [[https://github.com/gofiber/fiber][Fiber]]
